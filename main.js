@@ -1,7 +1,7 @@
 
 $(document).ready(function(){
   for(var i = 0;i<60;i++){
-    $('.container1').append('<div class="seconds" />');
+    $('.clock').append('<div class="seconds" />');
   }
 
   var deg = 264;
@@ -12,8 +12,6 @@ $(document).ready(function(){
       'opacity' : '0.1'
     });
   }
-
-  ////////////////////////////////////////////////////////////////////////////
 
   var t = setInterval(function(){
     var d = new Date();
