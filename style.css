@@ -1,0 +1,36 @@
+@font-face{
+  font-family:'digital-font';
+  src: url('font/digital-7-mono.ttf');
+ }
+
+body{
+  margin:0;
+  padding:0;
+  background: #000 url('bg.png') bottom left no-repeat;
+  background-size: 10%;
+  width: 100%;
+  height: 100vh;
+}
+.container1{
+  position: absolute;
+  left:50%;
+  top:50%;
+}
+.seconds{
+  position:absolute;
+  width:2.5vh;
+  height: 2.5vh;
+  border-radius: 50px;
+  background: #FF69B4;
+}
+
+.time{
+  font-family:'digital-font';
+  font-size:20vh;
+  color: #FF69B4;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:  translatex(-50%) translatey(-50%);
+  -webkit-transform:  translatex(-50%) translatey(-50%);
+}
