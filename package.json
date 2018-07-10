@@ -1,0 +1,16 @@
+{
+  "name": "foxy-clock",
+  "version": "1.0.0",
+  "description": "studio clock",
+  "author": "Tomasz Rondio",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "run": "node server.js"
+  },
+  "dependencies": {
+    "connect": "^3.6.6",
+    "serve-static": "^1.13.2"
+  },
+  "devDependencies": {}
+}

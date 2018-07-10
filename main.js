@@ -4,13 +4,25 @@ $(document).ready(function(){
     $('.clock').append('<div class="seconds" />');
   }
 
+  for(var i = 0;i<12;i++){
+    $('.clock').append('<div class="seconds_indicator" />');
+  }
+
   var deg = 264;
   for(var i = 1;i<61;i++){
     deg=deg+6;
     $('.seconds:nth-child('+i+')').css({
-      '-webkit-transform' : 'rotate('+deg+'deg) translatex(45vh)',
+      '-webkit-transform' : 'rotate('+deg+'deg) translatex(41vh)',
       'opacity' : '0.1'
     });
+  }
+  deg = 0;
+  for(var i = 60;i<73;i++){
+    deg=deg+30;
+    console.log(i);
+    $('.seconds_indicator:nth-child('+i+')')
+      .css('-transform', 'rotate('+deg+'deg) translatex(45vh)'
+    );
   }
 
   var t = setInterval(function(){
@@ -30,17 +42,9 @@ $(document).ready(function(){
       });
     }
 
-    if(h<10){
-      h = '0' + h;
-    }
-
-    if(m<10){
-      m = '0' + m;
-    }
-    if(s<10){
-      s = '0' + s;
-    }
-    var time = h + ":" + m + ":" + s;
-    $('.time').text(time);
+    var _time = ("0" + h).slice(-2) + ":" + ("0" + m).slice(-2) + ":" + ("0" + s).slice(-2);
+    var _date = ("0" + d.getDate()).slice(-2) + '.' + ("0" + (d.getMonth() + 1)).slice(-2) + '.' + d.getFullYear();
+    $('.time').text(_time);
+    $('.date').text(_date);
   },1000);
 });
